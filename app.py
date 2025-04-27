@@ -8,7 +8,7 @@ import pickle
 
 @st.cache_resource(show_spinner="loading the model...")
 def load_model():
-    with open('/modelle.pkl','rb') as file:
+    with open('modelle.pkl','rb') as file:
         model, scaler, le = pickle.load(file)
     return model, scaler, le
 
