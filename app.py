@@ -12,7 +12,7 @@ def load_model():
         model, scaler, le = pickle.load(file)
     return model, scaler, le
 
-
+# preprocessing the input data
 def preprocessing_input(data,scaler,le):
     data['Extracurricular Activities'] = le.transform([data['Extracurricular Activities']])[0]
     df = pd.DataFrame([data])
